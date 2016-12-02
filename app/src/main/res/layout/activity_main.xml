@@ -7,10 +7,56 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorPrimaryDark"
     tools:context="com.epicodus.gameencyclopedia.MainActivity">
 
     <TextView
+        android:textSize="20sp"
+        android:clickable="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Learn More about GameEncyclopedia"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorAccent"
+        android:background="?attr/selectableItemBackground"
+        android:id="@+id/textAbout" />
+
+
+    <EditText
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:inputType="number"
+        android:gravity="center"
+        android:hint="What game learn about?"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/textAbout"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/editTextQuery"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/game"
+        android:id="@+id/imageViewPoll"
+        android:layout_below="@+id/editTextQuery"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="42dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit search"
+        android:layout_alignBottom="@+id/imageViewPoll"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimaryLight"
+        android:id="@+id/buttonQuery"/>
+
+
 </RelativeLayout>
