@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxLines="1"
-        android:inputType="number"
+        android:inputType="text"
         android:gravity="center"
         android:hint="What game would you like to learn about?"
         android:layout_marginTop="37dp"
