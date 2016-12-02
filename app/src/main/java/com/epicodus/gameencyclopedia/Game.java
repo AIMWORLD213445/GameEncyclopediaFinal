@@ -6,19 +6,22 @@ public class Game {
     private String mImageUrl;
 
     public Game(String name, String deck, String imageURL) {
-        this mName = name;
-        this mDeck = deck;
-        this mImageUrl = imageURL;
+        this.mName = name;
+        this.mDeck = deck;
+        this.mImageUrl = imageURL;
     }
 
     public String getmName() {
         return mName;
     }
+
     public String getDeck() {
         return mDeck;
     }
+
     public String getmImageUrl() {
         return mImageUrl;
 
 
+    }
 }
