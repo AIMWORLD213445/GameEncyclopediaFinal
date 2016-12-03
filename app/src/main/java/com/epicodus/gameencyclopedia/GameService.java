@@ -43,9 +43,9 @@ public class GameService {
                 for (int i = 0; i < resultsJSON.length(); i++) {
                     JSONObject gameJSON = resultsJSON.getJSONObject(i);
                     String name = gameJSON.getString("name");
-                    String imageUrl = gameJSON.getString("image");
+                    String imageUrl = gameJSON.getJSONObject("image").getString("super_url");
                     String deck = gameJSON.getString("deck");
-                    Game game = new Game(name, imageUrl, deck);
+                    Game game = new Game(name, deck, imageUrl);
                     games.add(game);
                 }
 

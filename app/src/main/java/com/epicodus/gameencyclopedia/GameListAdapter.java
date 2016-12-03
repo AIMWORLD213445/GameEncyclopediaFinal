@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 import butterknife.Bind;
@@ -54,6 +56,7 @@ public class GameListAdapter extends RecyclerView.Adapter<GameListAdapter.GameVi
 
             }
         public void bindGame(Game game) {
+            Picasso.with(mContext).load(game.getmImageUrl()).into(mGameImageView);
             mgameNameTextView.setText(game.getName());
             mgameDeckTextView.setText(game.getDeck());
 
