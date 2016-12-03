@@ -3,6 +3,8 @@ package com.epicodus.gameencyclopedia;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -22,6 +24,10 @@ import okhttp3.Response;
 
 public class GameActivity extends AppCompatActivity {
     public static final String TAG = GameActivity.class.getSimpleName();
+    @Bind(R.id.recyclerView)
+    RecyclerView mRecyclerView;
+    private GameListAdapter mAdapter;
+
     public ArrayList<Game> mGames = new ArrayList<>();
 
     @Override
@@ -57,10 +63,11 @@ public class GameActivity extends AppCompatActivity {
 
                     @Override
                     public void run() {
-                        String[] gameNames = new String[mGames.size()];
-                        for (int i = 0; i < gameNames.length; i++) {
-                            gameNames[i] = mGames.get(i).getName();
-                        }
+                        mAdapter = new GameListAdapter(getApplicationContext(), mGames);
+                        mRecyclerView.setAdapter(mAdapter);
+                        RecyclerView.LayoutManager layoutManager =new LinearLayoutManager(GameActivity.this);
+                        mRecyclerView.setLayoutManager(layoutManager);
+                        mRecyclerView.setHasFixedSize(true);
                     }
 
                 });
