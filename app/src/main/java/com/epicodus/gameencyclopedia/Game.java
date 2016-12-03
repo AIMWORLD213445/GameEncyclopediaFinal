@@ -11,7 +11,7 @@ public class Game {
         this.mImageUrl = imageURL;
     }
 
-    public String getmName() {
+    public String getName() {
         return mName;
     }
 
