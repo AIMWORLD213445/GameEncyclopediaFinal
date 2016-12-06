@@ -19,7 +19,16 @@
         android:layout_marginTop="47dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call us at (555)-555-5555"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/phoneLabel"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="47dp"
+        android:layout_marginBottom="47dp"
+        />
 </RelativeLayout>
