@@ -23,25 +23,25 @@
         android:id="@+id/textAbout" />
 
 
-    <EditText
+    <!--<EditText-->
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxLines="1"
-        android:inputType="text"
-        android:gravity="center"
-        android:hint="What game would you like to learn about?"
-        android:layout_marginTop="37dp"
-        android:layout_below="@+id/textAbout"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/editTextQuery"/>
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:maxLines="1"-->
+        <!--android:inputType="text"-->
+        <!--android:gravity="center"-->
+        <!--android:hint="What game would you like to learn about?"-->
+        <!--android:layout_marginTop="37dp"-->
+        <!--android:layout_below="@+id/textAbout"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:id="@+id/editTextQuery"/>-->
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/game"
         android:id="@+id/imageViewPoll"
-        android:layout_below="@+id/editTextQuery"
+        android:layout_below="@+id/textAbout"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="42dp" />

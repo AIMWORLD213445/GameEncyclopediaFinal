@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private SharedPreferences mSharedPreferences;
     private SharedPreferences.Editor mEditor;
 
-    @Bind(R.id.editTextQuery) EditText mEditTextQuery;
+
     @Bind(R.id.buttonQuery) Button mButtonQuery;
     @Bind(R.id.textAbout) TextView mAboutView;
     @Bind(R.id.savedGameButton) Button mSavedGameButton;
@@ -29,10 +29,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        mEditor=mSharedPreferences.edit();
+//        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+//        mEditor=mSharedPreferences.edit();
         mSavedGameButton.setOnClickListener(this);
-
         mButtonQuery.setOnClickListener(this);
         mAboutView.setOnClickListener(this);
     }
@@ -45,12 +44,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         }
         if (v == mButtonQuery) {
-            String query = mEditTextQuery.getText().toString();
-            if(!(query).equals("")) {
-                addToSharedPreferences(query);
-            }
+//            String query = mEditTextQuery.getText().toString();
+//            if(!(query).equals("")) {
+//                addToSharedPreferences(query);
+//            }
             Intent intent = new Intent(MainActivity.this, GameListActivity.class);
-            intent.putExtra("query", query);
+//            intent.putExtra("query", query);
             startActivity(intent);
         }
         if(v == mSavedGameButton) {
@@ -59,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void addToSharedPreferences(String query) {
-      mEditor.putString(Constants.PREFERENCES_QUERY_KEY, query).apply();
-    }
+//    private void addToSharedPreferences(String query) {
+//      mEditor.putString(Constants.PREFERENCES_QUERY_KEY, query).apply();
+//    }
 }
