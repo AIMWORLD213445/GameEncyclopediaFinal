@@ -1,5 +1,7 @@
 package com.epicodus.gameencyclopedia;
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
@@ -23,6 +25,8 @@ import okhttp3.Callback;
 import okhttp3.Response;
 
 public class GameActivity extends AppCompatActivity {
+    private SharedPreferences mSharedPreferences;
+    private String mRecentSearch;
     public static final String TAG = GameActivity.class.getSimpleName();
     @Bind(R.id.recyclerView)
     RecyclerView mRecyclerView;
@@ -38,8 +42,13 @@ public class GameActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String query = intent.getStringExtra("query");
 
+        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        mRecentSearch = mSharedPreferences.getString(Constants.PREFERENCES_QUERY_KEY, null);
+        if (mRecentSearch != null) {
+            getGames((mRecentSearch));
+        }
 
-        getGames(query);
+//        getGames(query);
 
 
     }

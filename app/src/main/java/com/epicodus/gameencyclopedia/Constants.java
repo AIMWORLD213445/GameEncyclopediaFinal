@@ -5,4 +5,5 @@ public class Constants {
     public static final String GIANT_BOMB_URL = "http://www.giantbomb.com/api/search/?resources=game&format=json&field_list=name,deck,image&limit=10";
     public static final String GAME_SEARCH = "query";
     public static final String API_KEY_QUERY_PARAMETER = "api_key";
+    public static final String PREFERENCES_QUERY_KEY = "query";
 }
