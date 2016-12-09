@@ -1,0 +1,51 @@
+{
+  "project_info": {
+    "project_number": "547123678913",
+    "firebase_url": "https://gameencyclopedia-20cad.firebaseio.com",
+    "project_id": "gameencyclopedia-20cad",
+    "storage_bucket": "gameencyclopedia-20cad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547123678913:android:fe72dba04d7271c7",
+        "android_client_info": {
+          "package_name": "com.epicodus.gameencyclopedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "547123678913-cvkil2ntuq18merha806ohcjdd48elh9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.epicodus.gameencyclopedia",
+            "certificate_hash": "9733DB835DC3CD4A27443A45EE628410A77D8D4F"
+          }
+        },
+        {
+          "client_id": "547123678913-qrrib5s0n18i85ae6q6mf0sritmto8ee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "547123678913-qrrib5s0n18i85ae6q6mf0sritmto8ee.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
