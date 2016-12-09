@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Bind(R.id.editTextQuery) EditText mEditTextQuery;
     @Bind(R.id.buttonQuery) Button mButtonQuery;
     @Bind(R.id.textAbout) TextView mAboutView;
+    @Bind(R.id.savedGameButton) Button mSavedGameButton;
 
 
     @Override
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         mEditor=mSharedPreferences.edit();
+        mSavedGameButton.setOnClickListener(this);
 
         mButtonQuery.setOnClickListener(this);
         mAboutView.setOnClickListener(this);
@@ -49,6 +51,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             Intent intent = new Intent(MainActivity.this, GameListActivity.class);
             intent.putExtra("query", query);
+            startActivity(intent);
+        }
+        if(v == mSavedGameButton) {
+            Intent intent = new Intent(MainActivity.this, SavedGameListActivity.class);
             startActivity(intent);
         }
     }
