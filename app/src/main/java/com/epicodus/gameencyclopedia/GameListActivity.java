@@ -7,13 +7,6 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,10 +17,10 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-public class GameActivity extends AppCompatActivity {
+public class GameListActivity extends AppCompatActivity {
     private SharedPreferences mSharedPreferences;
     private String mRecentSearch;
-    public static final String TAG = GameActivity.class.getSimpleName();
+    public static final String TAG = GameListActivity.class.getSimpleName();
     @Bind(R.id.recyclerView)
     RecyclerView mRecyclerView;
     private GameListAdapter mAdapter;
@@ -68,13 +61,13 @@ public class GameActivity extends AppCompatActivity {
             public void onResponse(Call call, Response response) {
                 mGames = gameService.processResults(response);
 
-                GameActivity.this.runOnUiThread(new Runnable() {
+                GameListActivity.this.runOnUiThread(new Runnable() {
 
                     @Override
                     public void run() {
                         mAdapter = new GameListAdapter(getApplicationContext(), mGames);
                         mRecyclerView.setAdapter(mAdapter);
-                        RecyclerView.LayoutManager layoutManager =new LinearLayoutManager(GameActivity.this);
+                        RecyclerView.LayoutManager layoutManager =new LinearLayoutManager(GameListActivity.this);
                         mRecyclerView.setLayoutManager(layoutManager);
                         mRecyclerView.setHasFixedSize(true);
                     }

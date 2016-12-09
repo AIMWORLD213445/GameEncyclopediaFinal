@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if(!(query).equals("")) {
                 addToSharedPreferences(query);
             }
-            Intent intent = new Intent(MainActivity.this, GameActivity.class);
+            Intent intent = new Intent(MainActivity.this, GameListActivity.class);
             intent.putExtra("query", query);
             startActivity(intent);
         }
