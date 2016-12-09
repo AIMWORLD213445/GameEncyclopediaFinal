@@ -19,7 +19,8 @@
         </activity>
         <activity android:name=".GameListActivity" />
         <activity android:name=".AboutActivity" />
-        <activity android:name=".GameDetailActivity"></activity>
+        <activity android:name=".GameDetailActivity" />
+        <activity android:name=".SavedGameListActivity"></activity>
     </application>
 
 </manifest>
