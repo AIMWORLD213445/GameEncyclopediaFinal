@@ -22,9 +22,6 @@ import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
-/**
- * Created by Guest on 12/9/16.
- */
 public class FirebaseGameViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
     private static final int MAX_WIDTH = 200;
     private static final int MAX_HEIGHT = 200;
@@ -42,12 +39,12 @@ public class FirebaseGameViewHolder extends RecyclerView.ViewHolder implements V
     public void bindGame(Game game) {
         ImageView gameImageView = (ImageView) mView.findViewById(R.id.gameImageView);
         TextView nameTextView = (TextView) mView.findViewById(R.id.gameNameTextView);
-        TextView descTextView = (TextView) mView.findViewById(R.id.deckTextView);
+        TextView deckTextView = (TextView) mView.findViewById(R.id.gameDeckTextView);
 
         Picasso.with(mContext).load(game.getImageUrl()).resize(MAX_WIDTH, MAX_HEIGHT).centerCrop().into(gameImageView);
 
         nameTextView.setText(game.getName());
-        descTextView.setText(game.getDeck());
+        deckTextView.setText(game.getDeck());
 
 
     }
