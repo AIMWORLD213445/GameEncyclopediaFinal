@@ -1,7 +1,9 @@
 package com.epicodus.gameencyclopedia;
 
 
+import org.parceler.Parcel;
 
+@Parcel
 public class Game {
     private String name;
     private String deck;
@@ -23,7 +25,7 @@ public class Game {
         return deck;
     }
 
-    public String getmImageUrl() {
+    public String getImageUrl() {
         return imageUrl;
 
 
