@@ -46,6 +46,12 @@ public class SavedGameListActivity extends AppCompatActivity implements OnStartD
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String uid = user.getUid();
 
+        Query query = FirebaseDatabase.getInstance()
+                .getReference(Constants.FIREBASE_CHILD_GAMES)
+                .child(uid)
+                .orderByChild(Constants.FIREBASE_QUERY_INDEX);
+
+
         mGameReference = FirebaseDatabase
                 .getInstance()
                 .getReference(Constants.FIREBASE_CHILD_GAMES)
@@ -54,8 +60,7 @@ public class SavedGameListActivity extends AppCompatActivity implements OnStartD
 
 
         mFirebaseAdapter = new FirebaseGameListAdapter(Game.class,
-                R.layout.game_list_item_drag, FirebaseGameViewHolder.class,
-                mGameReference, this, this);
+                R.layout.game_list_item_drag, FirebaseGameViewHolder.class, query, this, this);
 
 
             mRecyclerView.setHasFixedSize(true);

@@ -22,7 +22,7 @@ import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
-public class FirebaseGameViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+public class FirebaseGameViewHolder extends RecyclerView.ViewHolder {
     public ImageView mGameImageView;
     private static final int MAX_WIDTH = 200;
     private static final int MAX_HEIGHT = 200;
@@ -35,7 +35,6 @@ public class FirebaseGameViewHolder extends RecyclerView.ViewHolder implements V
         super(itemView);
         mView = itemView;
         mContext = itemView.getContext();
-        itemView.setOnClickListener(this);
     }
 
     public void bindGame(Game game) {
@@ -51,33 +50,6 @@ public class FirebaseGameViewHolder extends RecyclerView.ViewHolder implements V
         deckTextView.setText(game.getDeck());
 
 
-    }
-
-    @Override
-    public void onClick(View view)
-    {
-        final ArrayList<Game> games = new ArrayList<>();
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_GAMES);
-        ref.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-            for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
-            games.add(snapshot.getValue(Game.class));
-            }
-            int itemPosition = getLayoutPosition();
-            Intent intent = new Intent(mContext, GameDetailActivity.class);
-            intent.putExtra("postion", itemPosition + "");
-            intent.putExtra("games", Parcels.wrap(games));
-
-                mContext.startActivity(intent);
-
-            }
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-
-        });
     }
 
 }
