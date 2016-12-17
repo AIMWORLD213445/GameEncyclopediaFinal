@@ -8,6 +8,7 @@ public class Game {
     private String name;
     private String deck;
     private String imageUrl;
+    private String pushId;
 
     public Game() {}
 
@@ -30,4 +31,12 @@ public class Game {
 
 
     }
-}
+
+    public String getPushId() {
+        return pushId;
+    }
+
+    public void setPushId(String pushId)
+    {
+        this.pushId = pushId;
+    }}

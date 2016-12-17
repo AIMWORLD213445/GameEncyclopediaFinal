@@ -23,8 +23,10 @@ import org.parceler.Parcels;
 import java.util.ArrayList;
 
 public class FirebaseGameViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public ImageView mGameImageView;
     private static final int MAX_WIDTH = 200;
     private static final int MAX_HEIGHT = 200;
+
 
     View mView;
     Context mContext;
@@ -37,11 +39,13 @@ public class FirebaseGameViewHolder extends RecyclerView.ViewHolder implements V
     }
 
     public void bindGame(Game game) {
-        ImageView gameImageView = (ImageView) mView.findViewById(R.id.gameImageView);
+        mGameImageView = (ImageView) mView.findViewById(R.id.gameImageView);
+
+//        ImageView gameImageView = (ImageView) mView.findViewById(R.id.gameImageView);
         TextView nameTextView = (TextView) mView.findViewById(R.id.gameNameTextView);
         TextView deckTextView = (TextView) mView.findViewById(R.id.gameDeckTextView);
 
-        Picasso.with(mContext).load(game.getImageUrl()).resize(MAX_WIDTH, MAX_HEIGHT).centerCrop().into(gameImageView);
+        Picasso.with(mContext).load(game.getImageUrl()).resize(MAX_WIDTH, MAX_HEIGHT).centerCrop().into(mGameImageView);
 
         nameTextView.setText(game.getName());
         deckTextView.setText(game.getDeck());
