@@ -1,4 +1,4 @@
-package com.epicodus.gameencyclopedia;
+package com.epicodus.gameencyclopedia.models;
 
 
 import org.parceler.Parcel;

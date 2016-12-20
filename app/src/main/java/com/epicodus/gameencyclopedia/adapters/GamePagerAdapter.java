@@ -1,11 +1,12 @@
-package com.epicodus.gameencyclopedia;
+package com.epicodus.gameencyclopedia.adapters;
+
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.epicodus.gameencyclopedia.Game;
-import com.epicodus.gameencyclopedia.GameDetailFragment;
+import com.epicodus.gameencyclopedia.models.Game;
+import com.epicodus.gameencyclopedia.ui.GameDetailFragment;
 
 import java.util.ArrayList;
 

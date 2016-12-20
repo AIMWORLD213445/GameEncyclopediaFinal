@@ -1,4 +1,4 @@
-package com.epicodus.gameencyclopedia;
+package com.epicodus.gameencyclopedia.ui;
 
 
 import android.os.Bundle;
@@ -11,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.epicodus.gameencyclopedia.Constants;
+import com.epicodus.gameencyclopedia.R;
+import com.epicodus.gameencyclopedia.models.Game;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;

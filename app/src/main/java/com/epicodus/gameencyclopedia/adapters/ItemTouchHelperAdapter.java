@@ -1,4 +1,5 @@
-package com.epicodus.gameencyclopedia;
+package com.epicodus.gameencyclopedia.adapters;
+
 
 
 public interface ItemTouchHelperAdapter {

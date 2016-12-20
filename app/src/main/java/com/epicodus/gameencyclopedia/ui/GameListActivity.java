@@ -1,4 +1,4 @@
-package com.epicodus.gameencyclopedia;
+package com.epicodus.gameencyclopedia.ui;
 
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -12,6 +12,12 @@ import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+
+import com.epicodus.gameencyclopedia.Constants;
+import com.epicodus.gameencyclopedia.R;
+import com.epicodus.gameencyclopedia.adapters.GameListAdapter;
+import com.epicodus.gameencyclopedia.models.Game;
+import com.epicodus.gameencyclopedia.services.GameService;
 
 import java.io.IOException;
 import java.util.ArrayList;

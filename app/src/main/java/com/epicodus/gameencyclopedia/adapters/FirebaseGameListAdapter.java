@@ -1,4 +1,4 @@
-package com.epicodus.gameencyclopedia;
+package com.epicodus.gameencyclopedia.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,6 +6,9 @@ import android.support.v4.view.MotionEventCompat;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.epicodus.gameencyclopedia.models.Game;
+import com.epicodus.gameencyclopedia.ui.GameDetailActivity;
+import com.epicodus.gameencyclopedia.util.OnStartDragListener;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;

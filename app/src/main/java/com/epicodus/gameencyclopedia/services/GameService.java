@@ -1,4 +1,7 @@
-package com.epicodus.gameencyclopedia;
+package com.epicodus.gameencyclopedia.services;
+
+import com.epicodus.gameencyclopedia.Constants;
+import com.epicodus.gameencyclopedia.models.Game;
 
 import org.json.JSONArray;
 import org.json.JSONException;

@@ -1,4 +1,5 @@
-package com.epicodus.gameencyclopedia;
+package com.epicodus.gameencyclopedia.adapters;
+
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +10,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.epicodus.gameencyclopedia.models.Game;
+import com.epicodus.gameencyclopedia.ui.GameDetailActivity;
+import com.epicodus.gameencyclopedia.R;
 import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;

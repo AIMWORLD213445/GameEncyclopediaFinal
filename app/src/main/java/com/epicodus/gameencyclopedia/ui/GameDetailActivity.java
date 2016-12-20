@@ -1,9 +1,10 @@
-package com.epicodus.gameencyclopedia;
-
+package com.epicodus.gameencyclopedia.ui;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import com.epicodus.gameencyclopedia.GamePagerAdapter;
+import com.epicodus.gameencyclopedia.adapters.GamePagerAdapter;
+import com.epicodus.gameencyclopedia.R;
+import com.epicodus.gameencyclopedia.models.Game;
 
 import org.parceler.Parcels;
 

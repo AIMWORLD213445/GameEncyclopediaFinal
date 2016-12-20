@@ -1,12 +1,18 @@
-package com.epicodus.gameencyclopedia;
+package com.epicodus.gameencyclopedia.ui;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.epicodus.gameencyclopedia.Constants;
+import com.epicodus.gameencyclopedia.util.OnStartDragListener;
+import com.epicodus.gameencyclopedia.R;
+import com.epicodus.gameencyclopedia.adapters.FirebaseGameListAdapter;
+import com.epicodus.gameencyclopedia.adapters.FirebaseGameViewHolder;
+import com.epicodus.gameencyclopedia.models.Game;
+import com.epicodus.gameencyclopedia.util.SimpleItemTouchHelperCallback;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
