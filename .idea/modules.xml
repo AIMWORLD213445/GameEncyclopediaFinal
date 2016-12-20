@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GameEncyclopediaFirebase.iml" filepath="$PROJECT_DIR$/GameEncyclopediaFirebase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GameEncyclopediaFinal.iml" filepath="$PROJECT_DIR$/GameEncyclopediaFinal.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
